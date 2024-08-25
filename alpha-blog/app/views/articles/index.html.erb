@@ -6,7 +6,7 @@
       <th>ID</th>
       <th>Title</th>
       <th>Description</th>
-      <th>Actions</th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -16,9 +16,12 @@
       <td><%=article.title%></td>
       <td><%=article.description%></td>
       <td><%= link_to 'Show', article_path(article)%></td> 
-      <td><%= button_to 'Delete', article_path(article), method: :delete %></td> 
-      <%# <td> <%=link_to 'Delete', article_path(article), method: :delete</td> aqui era pra ser um link mas não funcionou, conforme vi nos comentarios da aula, trocar para botao resolvia %>
+      <td><%= button_to 'Delete', article_path(article), method: :delete, data: { turbo_confirm: "are you sure?"}%></td>
+<%# <td> <%=link_to 'Delete', article_path(article), method: :delete</td> aqui era pra ser um link mas não funcionou, conforme vi nos comentarios da aula, trocar para botao resolvia %>
     </tr>
     <% end %>
   </tbody>
 </table>
+
+<%= link_to 'Create new article', new_article_path%></td> 
+

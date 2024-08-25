@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
       # redirect_to article_path(@article)
       redirect_to @article
     else
-      render 'new'
+      render 'new', status: 422
     end
   end
 
