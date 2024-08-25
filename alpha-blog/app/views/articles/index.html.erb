@@ -3,17 +3,21 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Title</th>
       <th>Description</th>
-      <th>Action</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     <% @articles.each do |article|%>
     <tr>
+      <td><%=article.id%></td>
       <td><%=article.title%></td>
       <td><%=article.description%></td>
-      <td>Placeholder</td>
+      <td><%= link_to 'Show', article_path(article)%></td> 
+      <td><%= button_to 'Delete', article_path(article), method: :delete %></td> 
+      <%# <td> <%=link_to 'Delete', article_path(article), method: :delete</td> aqui era pra ser um link mas não funcionou, conforme vi nos comentarios da aula, trocar para botao resolvia %>
     </tr>
     <% end %>
   </tbody>
