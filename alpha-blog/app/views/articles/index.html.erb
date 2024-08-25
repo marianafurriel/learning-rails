@@ -16,6 +16,7 @@
       <td><%=article.title%></td>
       <td><%=article.description%></td>
       <td><%= link_to 'Show', article_path(article)%></td> 
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= button_to 'Delete', article_path(article), method: :delete, data: { turbo_confirm: "are you sure?"}%></td>
 <%# <td> <%=link_to 'Delete', article_path(article), method: :delete</td> aqui era pra ser um link mas não funcionou, conforme vi nos comentarios da aula, trocar para botao resolvia %>
     </tr>

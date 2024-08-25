@@ -3,6 +3,7 @@
 <p><strong>Title: </strong><%= @article.title%></p>
 <p><strong>Description: </strong><%= @article.description%></p>
 
-<%= button_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= button_to 'Delete', article_path(@article), method: :delete, data: { turbo_confirm: "are you sure?"}%> | 
+<%= link_to 'Edit', edit_article_path(@article) %>
 
-<a href="/articles">index</a>
+<%= link_to 'Return to articles listing', articles_path %>
