@@ -10,7 +10,7 @@
 <%= form_with(model: @article,  local: true) do |f|%>
   <p> 
     <%= f.label :title %><br/> 
-    <%= f.text_field :title %>
+    <%= f.text_field :title,  class: "meu-estilo" %>
   </p>
   <p>
     <%= f.label :description %><br/> 
