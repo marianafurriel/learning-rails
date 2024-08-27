@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  private # anythin below is private, only the controller can see
+  private # anything below is private, only the controller can see
 
   def set_article
     @article = Article.find(params[:id])
